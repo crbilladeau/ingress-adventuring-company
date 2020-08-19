@@ -87,6 +87,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
+  flex-wrap: wrap;
   width: 100%;
   margin: 1rem auto;
   text-align: center;
@@ -128,7 +129,12 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem 0;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.mid-row h2 {
+  text-align: center;
 }
 
 .column-mid {
@@ -141,25 +147,30 @@ nav {
 .column-small {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 250px;
   margin: 0 0.5rem;
 }
 
 .column-small p {
   margin: 1rem 0 0 0;
-  line-height: 18px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .column-mid h3 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .column-mid h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .little {
-  font-size: 12px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 300;
 }
 
@@ -186,6 +197,7 @@ h4 {
 
 .image {
   width: 200px;
+  margin: 0.5rem 0;
 }
 
 .demon {
@@ -200,6 +212,11 @@ h4 {
 
 .contact {
   font-size: 40px;
+}
+
+#arrow {
+  width: 200px;
+  margin: 0.5rem 0;
 }
 
 .secondarrow {
@@ -223,6 +240,7 @@ h4 {
 footer {
   margin: 0.5rem 0 0 0;
   font-size: 12px;
+  text-align: center;
 }
 
 #cutec img {
@@ -265,5 +283,86 @@ footer {
   }
   100% {
     transform: rotate(4deg);
+  }
+}
+
+@media (max-width: 2000px) {
+  #arrow {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .mid-row {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .mid-row {
+    flex-direction: column;
+  }
+  .zoom-dragon {
+    width: 400px;
+  }
+  .column-small p {
+    text-align: center;
+  }
+  .column-mid {
+    padding: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 1rem;
+  }
+  audio {
+    width: 75%;
+  }
+  header h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .navlink {
+    margin: 0;
+  }
+  .column-mid ul {
+    padding: 0 1.5rem;
+  }
+  .bio {
+    padding: 0 0.5rem;
+  }
+  .zoom-dragon {
+    width: 300px;
+  }
+  .column-mid {
+    margin: 1rem 0;
+  }
+  .column-mid h3 {
+    max-width: 100%;
+    font-size: 20px;
+  }
+  .column-mid h4 {
+    font-size: 18px;
+  }
+  .column-small {
+    margin: 1rem 0;
+  }
+  .mid-row {
+    margin: 0 0 1rem 0;
   }
 }
