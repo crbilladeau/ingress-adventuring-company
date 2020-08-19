@@ -1,0 +1,269 @@
+@font-face {
+  font-family: 'Lucida';
+  src: url('../fonts/lucida.ttf');
+}
+
+@font-face {
+  font-family: 'Viner';
+  src: url('../fonts/viner.TTF');
+}
+
+@font-face {
+  font-family: 'Comic Sans';
+  src: url('../fonts/comicsans.TTF');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  cursor: url('../images/wand-1.cur'), default;
+}
+
+body {
+  /* background-color: peru; */
+  background-image: url('../images/leaves.gif');
+  background-size: 20%;
+  background-repeat: repeat repeat-x;
+  background-repeat: repeat repeat-y;
+  color: #000;
+  font-family: 'Comic Sans', sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+  padding: 1rem 2rem;
+  background-color: peru;
+  /* background-image: url('../images/acorns.jpg');
+  background-size: cover;
+  background-position: center center; */
+}
+
+header {
+  /* border: 3px solid orangered; */
+  text-align: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-image: url('../images/vines.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: orangered;
+  font-family: 'Viner';
+  font-size: 60px;
+  line-height: 70px;
+  text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3,
+    -2px -15px 11px #f80, 2px -18px 18px #f20;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+a {
+  color: orangered;
+  cursor: url('../images/wand-1.cur'), default;
+  text-decoration: none;
+}
+
+marquee {
+  background-color: orangered;
+  color: #fff;
+  font-family: 'Comic Sans', sans-serif;
+  font-size: 20px;
+  padding: 0.5rem 0;
+}
+
+.small-star {
+  width: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  font-family: 'Comic Sans', sans-serif;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.navlink span {
+  background-color: orangered;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border: 5px outset orange;
+}
+
+.nav-icons {
+  width: 150px;
+}
+
+.main {
+  margin: 1rem 0;
+}
+
+.mid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.column-mid {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  padding: 0 4rem;
+}
+
+.column-small {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 0.5rem;
+}
+
+.column-small p {
+  margin: 1rem 0 0 0;
+  line-height: 18px;
+}
+
+.column-mid h3 {
+  font-size: 22px;
+}
+
+.column-mid h4 {
+  font-size: 18px;
+}
+
+.little {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.column-mid h3,
+h4 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.column-mid h3::after {
+  height: 10px;
+  content: '';
+  display: block;
+  background-image: linear-gradient(
+    to right,
+    #ff3019 0%,
+    #e2b04a 50%,
+    #ff3019 100%
+  );
+  background-size: 50% auto;
+  animation: gradient 0.7s linear infinite;
+  margin: 1rem 0;
+}
+
+.image {
+  width: 200px;
+}
+
+.demon {
+  height: 200px;
+  width: 100px;
+}
+
+.glitter:hover {
+  color: white;
+  background-image: url('../images/glitter.gif');
+}
+
+.contact {
+  font-size: 40px;
+}
+
+.secondarrow {
+  transform: rotate(180deg);
+}
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+.counter-box h5 {
+  font-size: 16px;
+  margin: 0.5rem 0;
+}
+
+footer {
+  margin: 0.5rem 0 0 0;
+  font-size: 12px;
+}
+
+#cutec img {
+  background-color: orangered;
+  width: 300px;
+}
+
+.rotate {
+  animation: rotation 800ms infinite linear;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}
+
+.wiggle {
+  animation: wiggle 800ms infinite linear;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}
