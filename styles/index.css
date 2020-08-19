@@ -53,6 +53,11 @@ a {
   align-items: center;
 }
 
+audio {
+  margin: 1rem 0;
+  align-self: flex-start;
+}
+
 header {
   text-align: center;
   width: 100%;
