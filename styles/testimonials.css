@@ -137,19 +137,7 @@ nav {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
-  padding: 0 4rem;
-}
-
-.column-small {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  margin: 0 0.5rem;
-}
-
-.column-small p {
-  margin: 1rem 0 0 0;
-  line-height: 18px;
+  padding: 0 1rem;
 }
 
 .column-mid h3 {
@@ -200,12 +188,20 @@ h4 {
   background-image: url('../images/glitter.gif');
 }
 
-.contact {
-  font-size: 40px;
+.review1 {
+  width: 400px;
 }
 
-.secondarrow {
-  transform: rotate(180deg);
+.review2 {
+  width: 450px;
+}
+
+.column-mid:nth-child(1) {
+  transform: rotate(-5deg);
+}
+
+.column-mid:nth-child(2) {
+  transform: rotate(5deg);
 }
 
 .counter-box {
@@ -271,25 +267,52 @@ footer {
   }
 }
 
-@media (max-width: 1024px) {
-  body {
-    background-image: none;
+@media (max-width: 2000px) {
+  .container {
+    width: 75%;
   }
+}
+
+@media (max-width: 1440px) {
   .container {
     width: 100%;
     height: 100%;
   }
+  .mid-row {
+    flex-direction: row;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
   .mid-row {
     flex-direction: column;
   }
+  .column-mid {
+    margin: 2rem 0;
+  }
+  .column-mid:nth-child(1) {
+    transform: rotate(0deg);
+  }
+  .column-mid:nth-child(2) {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
   .zoom-dragon {
     width: 400px;
   }
   .column-mid {
     padding: 0;
+  }
+  .review1 {
+    width: 330px;
+  }
+  .review2 {
+    width: 380px;
   }
 }
 
@@ -311,9 +334,6 @@ footer {
   .zoom-dragon {
     width: 300px;
   }
-  .column-mid {
-    margin: 1rem 0;
-  }
   .column-mid h3 {
     max-width: 100%;
     font-size: 20px;
@@ -321,10 +341,13 @@ footer {
   .column-mid h4 {
     font-size: 18px;
   }
-  .column-small {
-    margin: 1rem 0;
-  }
+
   .mid-row {
     margin: 0 0 1rem 0;
+  }
+
+  .review1,
+  .review2 {
+    width: 280px;
   }
 }
