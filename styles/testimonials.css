@@ -35,7 +35,7 @@ body {
 
 .container {
   margin: auto;
-  width: 50%;
+  width: 75%;
   padding: 1rem 2rem;
   background-color: peru;
   /* background-image: url('../images/acorns.jpg');
@@ -130,14 +130,16 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin: 1rem 0;
 }
 
 .column-mid {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
-  padding: 0 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: orangered;
 }
 
 .column-mid h3 {
@@ -174,26 +176,13 @@ h4 {
   margin: 1rem 0;
 }
 
-.image {
-  width: 200px;
-}
-
-.demon {
-  height: 200px;
-  width: 100px;
-}
-
 .glitter:hover {
   color: white;
   background-image: url('../images/glitter.gif');
 }
 
-.review1 {
+.review {
   width: 400px;
-}
-
-.review2 {
-  width: 450px;
 }
 
 .column-mid:nth-child(1) {
@@ -202,6 +191,24 @@ h4 {
 
 .column-mid:nth-child(2) {
   transform: rotate(5deg);
+}
+
+.column-mid:nth-child(3) {
+  transform: rotate(-5deg);
+}
+
+.column-mid:nth-child(4) {
+  transform: rotate(-5deg);
+}
+
+.column-mid:nth-child(5) {
+  transform: rotate(5deg);
+}
+
+.portrait {
+  width: 100px;
+  border-radius: 50px;
+  align-self: center;
 }
 
 .counter-box {
@@ -267,9 +274,18 @@ footer {
   }
 }
 
-@media (max-width: 2000px) {
-  .container {
-    width: 75%;
+@media (max-width: 1815px) {
+  .column-mid:nth-child(3) {
+    transform: rotate(-5deg);
+  }
+  .column-mid:nth-child(2) {
+    transform: rotate(5deg);
+  }
+  .column-mid:nth-child(4) {
+    transform: rotate(5deg);
+  }
+  .column-mid:nth-child(4) {
+    transform: rotate(-5deg);
   }
 }
 
@@ -293,21 +309,15 @@ footer {
   .column-mid {
     margin: 2rem 0;
   }
-  .column-mid:nth-child(1) {
-    transform: rotate(0deg);
-  }
-  .column-mid:nth-child(2) {
-    transform: rotate(0deg);
-  }
 }
 
 @media (max-width: 768px) {
   .zoom-dragon {
     width: 400px;
   }
-  .column-mid {
+  /* .column-mid {
     padding: 0;
-  }
+  } */
   .review1 {
     width: 330px;
   }
@@ -316,7 +326,7 @@ footer {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 495px) {
   .container {
     padding: 1rem;
   }
@@ -346,8 +356,16 @@ footer {
     margin: 0 0 1rem 0;
   }
 
-  .review1,
-  .review2 {
-    width: 280px;
+  .review {
+    width: 350px;
+  }
+}
+
+@media (max-width: 425px) {
+  .column-mid {
+    padding: 0.5rem;
+  }
+  .review {
+    width: 260px;
   }
 }
