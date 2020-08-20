@@ -48,9 +48,6 @@ header {
   text-align: center;
   margin: 1rem;
   padding: 0.5rem;
-  background-image: url('../images/vines.png');
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 h1 {

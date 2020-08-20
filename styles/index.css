@@ -61,9 +61,6 @@ audio {
 header {
   text-align: center;
   width: 100%;
-  background-image: url('../images/vines.png');
-  background-size: contain;
-  background-repeat: no-repeat;
   margin: 4rem 0;
 }
 
@@ -231,6 +228,9 @@ footer {
   .navlink {
     font-size: 50px;
   }
+  .zoom-dragon {
+    width: 400px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -253,5 +253,8 @@ footer {
   }
   .navlink {
     font-size: 35px;
+  }
+  .zoom-dragon {
+    width: 300px;
   }
 }
